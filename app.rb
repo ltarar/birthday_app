@@ -1,6 +1,7 @@
 require 'sinatra/base'
 
 class Birthday < Sinatra::Base
+  # configure(:development) { set :session_secret, "something" }
   # enable : sessions
   get '/' do
     erb(:index)
