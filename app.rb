@@ -1,6 +1,7 @@
 require 'sinatra/base'
 
 class Birthday < Sinatra::Base
+  # enable : sessions
   get '/' do
     erb(:index)
   end
