@@ -23,6 +23,6 @@ feature 'Submits Name & DOB' do
     fill_in(:day, with: '22')
     find("option[value='February']").select_option
     click_button 'Go!'
-    expect(page).to have_content "Lola! Your birthday is in 337 days!" 
+    expect(page).to have_content "Lola, your birthday is in 337 days!" 
   end
 end
