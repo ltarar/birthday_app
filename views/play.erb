@@ -1,1 +1,11 @@
-<%= "#{@name}! Your birthday is on #{@month} #{@day}!" %>
+<center>
+
+<link rel="stylesheet" type="text/css" href="/style.css">
+
+<% if @birthday == @today %>
+<h1> Happy Birthday <%=@name%>! </h1>
+<% else %>
+<h1> <%=@name%>! Your birthday is in <%=@days_left%> days! </h1>
+<% end %>
+
+</center>
