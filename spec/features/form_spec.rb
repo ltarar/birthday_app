@@ -17,4 +17,12 @@ feature 'Submits Name & DOB' do
     expect(page).to have_content "Happy Birthday Lola!" 
   end
   
+  scenario 'returns the number of days left in the birthday' do
+    visit ('/')
+    fill_in(:name, with: 'Lola')
+    fill_in(:day, with: '22')
+    find("option[value='February']").select_option
+    click_button 'Go!'
+    expect(page).to have_content "Lola! Your birthday is in 337 days!" 
+  end
 end
